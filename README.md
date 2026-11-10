@@ -28,6 +28,9 @@ masih dipakai tidak dapat dihapus. Relasi resep ke bahan menggunakan
 File `database/db_recipes.sql` berisi pembuatan database, struktur tabel,
 foreign key, dan data contoh.
 
+Konfigurasi koneksi database berada di `config/db.php` dan menggunakan ekstensi
+`mysqli`.
+
 ## Alur Program
 
 Browser mengakses `index.php` sebagai controller utama. File tersebut memuat
@@ -53,5 +56,3 @@ statement, sedangkan output dari database di-escape menggunakan
 - `view/`: header, footer, dan halaman HTML untuk tiap tabel.
 - `index.php`: controller dan routing halaman.
 - `style.css`: tampilan sederhana aplikasi.
-
-Semua query menggunakan prepared statement. Foreign key kategori memakai `ON DELETE RESTRICT`, sedangkan bahan resep memakai `ON DELETE CASCADE`.
